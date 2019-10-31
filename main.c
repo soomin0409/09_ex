@@ -1,19 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#define size 5
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-	int score[5],i;
-	score[0]=60;
-	score[1]=70;
-	score[2]=80;
-	score[3]=90;
-	score[4]=100;
-	for(i=0;i<5;i++)
+	int i;
+	int grade[size];
+	int score[size];
+	for(i=0;i<size;i++)
 	{
-		printf("score[%d]=%d\n",i,score[i]);
+		grade[i]=rand()%100;
+		score[i]=grade[i];
+		
 	}
+	for(i=0;i<size;i++)
+	{
+		printf("score[%i] : %d\n",i,score[i]);
+		}
 	
 	return 0;
 }
